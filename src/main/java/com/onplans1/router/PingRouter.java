@@ -1,7 +1,6 @@
 package com.onplans1.router;
 
 import com.onplans1.handler.PingHandler;
-import com.onplans1.handler.PingHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
@@ -19,6 +18,7 @@ public class PingRouter {
   public RouterFunction<ServerResponse> route(PingHandler pingHandler) {
 
     return RouterFunctions
-      .route(GET("/ping").and(accept(MediaType.APPLICATION_JSON)), pingHandler::ping);
+      .route(GET("/ping").and(accept(MediaType.APPLICATION_JSON)), pingHandler::ping)
+      .andRoute(GET("/pingremote").and(accept(MediaType.APPLICATION_JSON)), pingHandler::pingRemote);
   }
 }

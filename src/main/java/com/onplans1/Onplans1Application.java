@@ -10,7 +10,8 @@ import org.springframework.context.annotation.ComponentScan;
 	"com.onplans1.handler",
 	"com.onplans1.interceptor",
 	"com.onplans1.router",
-	"com.onplans1.metrics"
+	"com.onplans1.metrics",
+	"com.onplans1.common"
 })
 
 public class Onplans1Application {

@@ -3,9 +3,9 @@
     mvn spring-boot:run
 
 ## To build, tag docker image and push it to ECR
-    sudo docker build -t onplan_v1 .
+    sudo docker build -t onplans1 .
     sudo docker image ls
-    sudo docker run -p 8080:8080 onplan_v1
+    sudo docker run -p 8080:8080 onplans1
 
 
 ## To enable disyributed tracing locally, follow below steps:
