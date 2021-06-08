@@ -35,7 +35,7 @@ public class PingHandler {
   @Timed(value = "onplans1.time", description = "Time taken to return service request")
   public Mono<ServerResponse> pingRemote(ServerRequest serverRequest) {
 
-    String onplan_base_uri = onPlanServiceConfig.getBaseUrl() + "/ping";
+    String onplan_base_uri = "http://" + onPlanServiceConfig.getBaseUrl() + "/ping";
     RestTemplate restTemplate = new RestTemplate();
     String result = restTemplate.getForObject(onplan_base_uri, String.class);
     return ServerResponse.ok()
